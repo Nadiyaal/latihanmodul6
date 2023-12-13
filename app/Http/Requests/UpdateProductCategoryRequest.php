@@ -11,7 +11,7 @@ class UpdateProductCategoryRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,8 +22,8 @@ class UpdateProductCategoryRequest extends FormRequest
     public function rules(): array
     {
         return [
-            "name" => "string|required",
-            "description" => "string",
+            "name" => "string",
+            "description" => "string"
         ];
     }
 }
